@@ -21,7 +21,7 @@ uint8_t F(uint8_t x, uint8_t y) {
             injected_byte |= ((random_byte >> i) & 1) << i;
         }
     }
-    return x ^ injected_byte;  // Inject random bits into positions determined by y
+    return x ^ injected_byte;  
 }
 
 int main() {
