@@ -17,7 +17,7 @@ uint8_t F(uint8_t x, uint8_t y) {
     uint8_t random_byte = generateRandomByte();
     uint8_t injected_byte = 0;
     for (int i = 0; i < 8; ++i) {
-        if (y & (1 << i)) {  // If the ith bit of y is set
+        if (y & (1 << i)) {  
             injected_byte |= ((random_byte >> i) & 1) << i;
         }
     }
