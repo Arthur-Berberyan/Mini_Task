@@ -1,35 +1,48 @@
-# Bytes Table Generator
+# Mini Task - Permutation Generator
 
-This C++ program generates a table of bytes based on permutations and a function `F` that injects random bits into the bytes based on specified positions.
+This C++ program generates random permutations `P1` and `P2` and utilizes function `F` to modify bytes in a 256x256 table based on these permutations.
 
-## Description
+## Table of Contents
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Example Output](#example-output)
 
-The program consists of the following components:
+## Introduction
 
-- **Permutation Generation**: Two permutations (`P1` and `P2`) of length 256 are generated randomly using the `generate_permutation` function.
-- **Function F**: The `F` function takes a byte and a set of positions as input and injects random bits into the byte at the specified positions.
-- **Table Generation**: A 256x256 table of bytes is generated, where each row alternates between using permutation `P1` and `P2` to determine the bits to be injected using function `F`.
-- **Output**: The generated permutations (`P1` and `P2`) and the first few rows of the generated table are printed to the console.
+This program is a mini task aimed at generating a 256x256 table with modified bytes. It utilizes random permutations `P1` and `P2` and a function `F` to achieve this. The generated table can be used for various applications such as cryptographic operations, data manipulation, or simulation purposes.
 
 ## Usage
 
-1. Clone the repository or copy the code into a C++ file.
-2. Compile the code using a C++ compiler (e.g., g++).
-3. Run the compiled executable.
-4. View the output in the console, which includes the generated permutations and the first few rows of the generated table.
+Follow these steps to compile and run the program:
 
-## Dependencies
+1. Clone the repository:
+git clone https://github.com/Arthur-Berberyan/Mini_Task.git
 
-- C++ standard libraries (`iostream`, `vector`, `algorithm`, `random`)
-- Compiler with C++11 support
+2. Navigate to the project directory:
+cd Mini_Task
+
+3. Compile the program:
+g++ -o perm perm.cpp
+
+4. Run the program:
+/perm
+
+
+## How It Works
+
+The program begins by generating two random permutations `P1` and `P2`, where each permutation maps numbers from 0 to 255 to other numbers in the same range. Function `F` takes two arguments, `P1(x)` and `P2(y)`, and generates a random byte. It injects the bits of this random byte into some positions of the byte represented by `P1(x)`, based on the bits set in the byte represented by `P2(y)`.
+
+The program then constructs a 256x256 table, with each element being a byte. It fills the table by applying function `F` to every combination of `x` and `y`.
 
 ## Example Output
 
-```plaintext
-Permutation P1: 10 55 87 ... (256 values)
-Permutation P2: 198 76 32 ... (256 values)
-First few rows of the table:
-132 77 245 64 213 32 145 199 255 10
-34 89 43 192 76 201 155 200 0 55
-...
+Here's an example output of the program:
+First row of the table:
+[ 10, 20, 30, ... ]
+Second row of the table:
+[ 50, 60, 70, ... ]
+Permutation P1: [ 2, 5, 0, ... ]
+
+
 
