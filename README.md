@@ -6,7 +6,6 @@ This C++ program generates random permutations `P1` and `P2` and utilizes functi
 - [Introduction](#introduction)
 - [Usage](#usage)
 - [How It Works](#how-it-works)
-- [Example Output](#example-output)
 
 ## Introduction
 
@@ -17,9 +16,8 @@ This program is a mini task aimed at generating a 256x256 table with modified by
 Follow these steps to compile and run the program:
 
 1. Clone the repository:
-'''
 git clone https://github.com/Arthur-Berberyan/Mini_Task.git
-'''
+
 2. Navigate to the project directory:
 cd Mini_Task
 
@@ -36,14 +34,7 @@ The program begins by generating two random permutations `P1` and `P2`, where ea
 
 The program then constructs a 256x256 table, with each element being a byte. It fills the table by applying function `F` to every combination of `x` and `y`.
 
-## Example Output
 
-Here's an example output of the program:
-First row of the table:
-[ 10, 20, 30, ... ]
-Second row of the table:
-[ 50, 60, 70, ... ]
-Permutation P1: [ 2, 5, 0, ... ]
 
 
 
