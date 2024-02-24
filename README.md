@@ -17,8 +17,9 @@ This program is a mini task aimed at generating a 256x256 table with modified by
 Follow these steps to compile and run the program:
 
 1. Clone the repository:
+'''
 git clone https://github.com/Arthur-Berberyan/Mini_Task.git
-
+'''
 2. Navigate to the project directory:
 cd Mini_Task
 
