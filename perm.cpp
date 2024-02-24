@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <random>
 
-std::vector<int> generate_permutation(bool isP1 = true) {
+std::vector<int> generate_permutation() {
     std::vector<int> perm(256);
     for (int i = 0; i < 256; ++i) {
         perm[i] = i;
@@ -28,8 +28,8 @@ unsigned char F(unsigned char byte, unsigned char positions) {
 int main() {
     srand(time(NULL));
 
-    std::vector<int> perm_P1 = generate_permutation(true);
-    std::vector<int> perm_P2 = generate_permutation(false);
+    std::vector<int> perm_P1 = generate_permutation();
+    std::vector<int> perm_P2 = generate_permutation();
 
     std::vector<std::vector<unsigned char>> table(256, std::vector<unsigned char>(256));
 
